@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #0B0D0F;
+    color: #F4F0E8;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #0B0D0F;
+    color: #F4F0E8;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  ::selection {
+    background-color: #E76516;
+    color: #FFFFFF;
+  }
+
+  /* Custom subtle dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0D0F;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262B32;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C99635;
+  }
+}
+
+@layer utilities {
+  /* Subtle brushed metal sheen utility */
+  .bg-brushed-metal {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.25) 100%
+    );
+  }
+
+  /* Subtle vignette overlay */
+  .bg-vignette {
+    background: radial-gradient(circle at 50% 50%, transparent 60%, rgba(11, 13, 15, 0.8) 100%);
+  }
+
+  /* Warm ambient glow backgrounds */
+  .glow-gold-subtle {
+    box-shadow: 0 0 50px -10px rgba(201, 150, 53, 0.15);
+  }
+
+  .glow-orange-subtle {
+    box-shadow: 0 0 60px -15px rgba(231, 101, 22, 0.2);
+  }
+
+  /* Thin hairline borders */
+  .border-hairline {
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
