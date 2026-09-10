@@ -122,7 +122,7 @@ export const Header: React.FC = () => {
               <span>Book Your Appointment</span>
             </a>
             <p className="text-center text-xs text-brand-grey mt-2">
-              Demonstration Mode · Apex Barbershop
+              Demonstration Mode · {businessConfig.businessName}
             </p>
           </div>
         </div>

@@ -43,8 +43,8 @@ export interface TestimonialItem {
 
 export const businessConfig = {
   // Core Business Identity
-  businessName: "Apex Barbershop",
-  brandWord1: "APEX",
+  businessName: "Classic Barbershop",
+  brandWord1: "CLASSIC",
   brandWord2: "BARBERSHOP",
   tagline: "Sharp Cuts. Clean Fades. Proper Attention to Detail.",
   subTagline: "Precision, style, professionalism and close attention to detail.",
@@ -66,7 +66,7 @@ export const businessConfig = {
     whatsappNumber: "",
     
     // Default pre-filled message for general booking inquiries
-    defaultBookingMessage: "Hi Apex Barbershop, I’d like to book an appointment. What times are available?",
+    defaultBookingMessage: "Hi Classic Barbershop, I’d like to book an appointment. What times are available?",
     
     // Address Details
     address: {
@@ -84,7 +84,7 @@ export const businessConfig = {
     
     // Social & Web Links
     instagram: {
-      handle: "@apexbarbershop.demo",
+      handle: "@classicbarbershop.demo",
       url: "https://www.instagram.com",
     },
     
@@ -190,7 +190,7 @@ export const businessConfig = {
       title: "Precision Mid Skin Fade",
       category: "Skin Fade",
       image: "/images/portfolio-skin-fade.jpg",
-      alt: "Close up of a precision skin fade haircut at Apex Barbershop",
+      alt: "Close up of a precision skin fade haircut at Classic Barbershop",
       featured: true,
     },
     {
@@ -222,7 +222,7 @@ export const businessConfig = {
       title: "Clean Taper Fade & Natural Top",
       category: "Taper Fade",
       image: "/images/portfolio-taper-fade.jpg",
-      alt: "Clean tapered neckline and temple fade at Apex Barbershop",
+      alt: "Clean tapered neckline and temple fade at Classic Barbershop",
       featured: false,
     },
     {
