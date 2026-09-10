@@ -63,8 +63,6 @@ export const LocationHours: React.FC = () => {
 
                     <a
                       href={getWhatsAppBookingUrl()}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2.5 rounded-sm bg-brand-orange hover:bg-brand-orange-hover text-white text-xs font-display uppercase tracking-wider font-semibold transition-all shadow-sm"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
@@ -130,8 +128,6 @@ export const LocationHours: React.FC = () => {
               {/* WhatsApp */}
               <a
                 href={getWhatsAppBookingUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="p-4 rounded-sm bg-brand-surface border border-brand-border hover:border-brand-gold/40 transition-colors group flex items-center gap-3"
               >
                 <div className="w-9 h-9 rounded-sm bg-brand-bg flex items-center justify-center text-brand-orange shrink-0">
@@ -191,8 +187,8 @@ export const LocationHours: React.FC = () => {
               <div className="relative flex-1 bg-brand-bg min-h-[320px] flex items-center justify-center overflow-hidden">
                 {/* Embedded Map iFrame styled for dark aesthetics */}
                 <iframe
-                  title="Faded Barbershop Location Map"
-                  src="https://maps.google.com/maps?q=Ireland&t=&z=7&ie=UTF8&iwloc=&output=embed"
+                  title={`${businessConfig.businessName} Location Map`}
+                  src="https://maps.google.com/maps?q=Barbershop&t=&z=7&ie=UTF8&iwloc=&output=embed"
                   className="w-full h-full min-h-[320px] border-0 filter grayscale invert contrast-125 opacity-70"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -205,7 +201,7 @@ export const LocationHours: React.FC = () => {
                       <div className="flex items-center gap-1.5 text-brand-gold mb-1">
                         <MapPin className="w-3.5 h-3.5" />
                         <span className="text-xs font-display uppercase tracking-wider font-bold text-brand-white">
-                          Faded Barbershop
+                          {businessConfig.businessName}
                         </span>
                       </div>
                       <p className="text-xs text-brand-grey">

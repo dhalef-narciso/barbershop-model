@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <img
           src="/images/hero-fade.jpg"
-          alt="Sharp skin fade haircut at Faded Barbershop"
+          alt={`Sharp skin fade haircut at ${businessConfig.businessName}`}
           className="w-full h-full object-cover object-center scale-105 filter brightness-[0.72] contrast-105"
         />
         {/* Layered vignette & gradient scrims for maximum contrast and editorial warmth */}
@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-brand-surface/90 border border-brand-border backdrop-blur-sm mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse" />
             <span className="text-xs font-display tracking-[0.25em] uppercase text-brand-gold font-semibold">
-              {businessConfig.businessName.toUpperCase()} · {businessConfig.locationCountry.toUpperCase()}
+              {businessConfig.businessName.toUpperCase()} · DEMO
             </span>
           </div>
 
@@ -46,8 +46,6 @@ export const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
             <a
               href={getWhatsAppBookingUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-sm bg-brand-orange hover:bg-brand-orange-hover text-white font-medium text-base tracking-wider uppercase transition-all duration-200 shadow-lg hover:shadow-orange-glow focus:outline-none focus:ring-2 focus:ring-brand-orange/60 group"
             >
               <MessageSquare className="w-5 h-5 text-white" />

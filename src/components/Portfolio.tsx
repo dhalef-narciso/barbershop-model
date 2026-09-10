@@ -24,7 +24,7 @@ export const Portfolio: React.FC = () => {
               Fresh Cuts from the Chair
             </h2>
             <p className="text-base text-brand-grey font-normal mt-3">
-              A showcase of recent fades, tailored haircuts and beard work crafted at Faded Barbershop.
+              A showcase of recent fades, tailored haircuts and beard work crafted at {businessConfig.businessName}.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export const Portfolio: React.FC = () => {
                   <h3 className="font-display text-lg uppercase tracking-wide text-brand-white font-semibold group-hover:text-brand-gold transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-brand-grey mt-0.5">By Fernando Chaves</p>
+                  <p className="text-xs text-brand-grey mt-0.5">By {businessConfig.ownerName}</p>
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@ export const Portfolio: React.FC = () => {
             </div>
             <div>
               <h4 className="font-display text-xl uppercase tracking-wider text-brand-white font-semibold">
-                Follow Fernando on Instagram
+                Follow Our Work on Instagram
               </h4>
               <p className="text-sm text-brand-grey">
                 Daily stories, fresh fades, and styling inspiration at{" "}
@@ -136,7 +136,7 @@ export const Portfolio: React.FC = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-brand-surface-elevated hover:bg-brand-surface hover:border-brand-gold border border-brand-border text-brand-white font-display text-xs uppercase tracking-wider font-semibold transition-all duration-200 shrink-0"
           >
-            <span>Visit @faded.bbarbershop</span>
+            <span>Visit {businessConfig.contact.instagram.handle}</span>
             <ArrowUpRight className="w-4 h-4 text-brand-gold" />
           </a>
         </div>

@@ -78,10 +78,8 @@ export const Services: React.FC = () => {
 
                   <a
                     href={bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2.5 rounded-sm bg-brand-surface-elevated hover:bg-brand-orange text-brand-white hover:text-white border border-brand-border hover:border-brand-orange text-xs font-display uppercase tracking-wider font-semibold transition-all duration-200"
-                    aria-label={`Book ${service.name} via WhatsApp`}
+                    aria-label={`Book ${service.name}`}
                   >
                     <MessageSquare className="w-3.5 h-3.5 text-brand-gold group-hover:text-white" />
                     <span>Book This Service</span>
@@ -99,13 +97,11 @@ export const Services: React.FC = () => {
               <Check className="w-3.5 h-3.5" />
             </div>
             <p className="text-sm text-brand-white">
-              <span className="font-semibold">Unsure what to choose?</span> Contact Fernando directly for a style recommendation before your cut.
+              <span className="font-semibold">Unsure what to choose?</span> Contact your barber directly for a style recommendation before your cut.
             </p>
           </div>
           <a
             href={getWhatsAppBookingUrl("General consultation / advice")}
-            target="_blank"
-            rel="noopener noreferrer"
             className="text-xs font-display uppercase tracking-wider text-brand-gold hover:text-brand-gold-light underline underline-offset-4 whitespace-nowrap transition-colors"
           >
             Ask a Question on WhatsApp →

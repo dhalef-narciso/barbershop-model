@@ -2,7 +2,7 @@
  * CENTRAL BUSINESS CONFIGURATION
  * 
  * Update this file to modify all contact information, prices, address, hours,
- * and external links across the entire Faded Barbershop website.
+ * and external links across the entire barbershop website.
  * 
  * Unconfirmed items use explicit placeholders like "[Confirm address]".
  */
@@ -43,47 +43,49 @@ export interface TestimonialItem {
 
 export const businessConfig = {
   // Core Business Identity
-  businessName: "Faded Barbershop",
+  businessName: "Apex Barbershop",
+  brandWord1: "APEX",
+  brandWord2: "BARBERSHOP",
   tagline: "Sharp Cuts. Clean Fades. Proper Attention to Detail.",
   subTagline: "Precision, style, professionalism and close attention to detail.",
-  ownerName: "Fernando Chaves",
+  ownerName: "Alex Vance",
   ownerTitle: "Owner & Master Barber",
-  locationCountry: "Ireland",
+  locationCountry: "Demo",
   
   // Contact & Booking Details
   contact: {
     // Visible formatted phone number for display
-    phoneDisplay: "+353 85 262 0100",
-    // Clean raw phone for tel: links (e.g. "+353800000000")
-    phoneRaw: "+353852620100",
+    phoneDisplay: "(00) 00000-0000",
+    // Clean raw phone for tel: links
+    phoneRaw: "",
     
     // Visible formatted WhatsApp number
-    whatsappDisplay: "+353 85 262 0100",
-    // WhatsApp international phone without '+' or spaces (e.g. "353871234567")
-    // When empty, the link uses WhatsApp direct chat or fallback
-    whatsappNumber: "353852620100",
+    whatsappDisplay: "(Demo / Inativo)",
+    // WhatsApp international phone without '+' or spaces
+    // Empty in demonstration mode to avoid contacting any real number
+    whatsappNumber: "",
     
     // Default pre-filled message for general booking inquiries
-    defaultBookingMessage: "Hi Faded Barbershop, I’d like to book an appointment. What times are available?",
+    defaultBookingMessage: "Hi Apex Barbershop, I’d like to book an appointment. What times are available?",
     
     // Address Details
     address: {
-      street: "[Confirm address]",
-      area: "[Confirm area / city]",
-      country: "Ireland",
-      eircode: "[Confirm Eircode]",
+      street: "Avenida Principal, 123",
+      area: "Centro",
+      country: "Demonstration",
+      eircode: "00000-000",
       // Display string combining available address parts
-      fullDisplay: "[Confirm address], Ireland",
+      fullDisplay: "Avenida Central, 123 - Demonstração",
       // Google Maps search / navigation URL
-      googleMapsUrl: "https://maps.google.com/?q=Ireland",
-      // Embedded map coordinates or place search (Ireland center placeholder)
-      mapEmbedQuery: "Ireland",
+      googleMapsUrl: "https://maps.google.com/?q=Barbershop",
+      // Embedded map coordinates or place search
+      mapEmbedQuery: "Barbershop",
     },
     
     // Social & Web Links
     instagram: {
-      handle: "@faded.bbarbershop",
-      url: "https://www.instagram.com/faded.bbarbershop",
+      handle: "@apexbarbershop.demo",
+      url: "https://www.instagram.com",
     },
     
     // Optional direct booking link if an external system is added in the future (e.g. Fresha/Booksy)
@@ -92,9 +94,9 @@ export const businessConfig = {
   
   // Opening Hours Schedule
   openingHours: [
-    { days: "Monday – Wednesday", hours: "[Confirm hours]", isClosed: false },
-    { days: "Thursday – Friday", hours: "[Confirm hours]", isClosed: false },
-    { days: "Saturday", hours: "[Confirm hours]", isClosed: false },
+    { days: "Monday – Wednesday", hours: "09:00 – 19:00", isClosed: false },
+    { days: "Thursday – Friday", hours: "09:00 – 20:00", isClosed: false },
+    { days: "Saturday", hours: "08:30 – 18:00", isClosed: false },
     { days: "Sunday", hours: "Closed", isClosed: true },
   ] as OpeningHourItem[],
 
@@ -125,7 +127,7 @@ export const businessConfig = {
     {
       id: "easy-booking",
       title: "Easy Booking",
-      description: "Contact the barbershop directly through WhatsApp.",
+      description: "Contact the barbershop directly through our booking channels.",
     },
   ],
 
@@ -181,14 +183,14 @@ export const businessConfig = {
     },
   ] as ServiceItem[],
 
-  // Portfolio Gallery (6 items, first 3 highlighted)
+  // Portfolio / Visual Gallery items
   portfolio: [
     {
       id: "cut-1",
       title: "Precision Mid Skin Fade",
       category: "Skin Fade",
       image: "/images/portfolio-skin-fade.jpg",
-      alt: "Close up of a precision skin fade haircut at Faded Barbershop",
+      alt: "Close up of a precision skin fade haircut at Apex Barbershop",
       featured: true,
     },
     {
@@ -204,7 +206,7 @@ export const businessConfig = {
       title: "Sculpted Beard & Sharp Fade",
       category: "Beard Styling",
       image: "/images/portfolio-beard-styling.jpg",
-      alt: "Crisp beard line up and fade grooming by Fernando Chaves",
+      alt: "Crisp beard line up and fade grooming by Master Barber",
       featured: true,
     },
     {
@@ -220,7 +222,7 @@ export const businessConfig = {
       title: "Clean Taper Fade & Natural Top",
       category: "Taper Fade",
       image: "/images/portfolio-taper-fade.jpg",
-      alt: "Clean tapered neckline and temple fade at Faded Barbershop",
+      alt: "Clean tapered neckline and temple fade at Apex Barbershop",
       featured: false,
     },
     {
@@ -233,16 +235,17 @@ export const businessConfig = {
     },
   ] as PortfolioItem[],
 
-  // Testimonials Configuration
-  // Per requirement: keep editable placeholders, but HIDE on live page if no verified reviews exist
+  // Client Testimonials
   testimonials: {
-    enabled: false, // Set to true once verified reviews from Google / clients are ready
+    enabled: false,
+    averageRating: 5.0,
+    totalReviews: "50+",
     items: [
       {
         id: "review-1",
         author: "[Client Name]",
         role: "Regular Client",
-        review: "[Verified Google review placeholder: Best fade and attention to detail in the area. Fernando is a top barber.]",
+        review: "[Verified review placeholder: Best fade and attention to detail in the area. Top barber with unmatched precision.]",
         rating: 5,
         source: "Google",
         date: "Recent",
@@ -251,7 +254,7 @@ export const businessConfig = {
         id: "review-2",
         author: "[Client Name]",
         role: "Regular Client",
-        review: "[Verified Google review placeholder: Sharp cuts every single visit. Unrushed, professional and great atmosphere.]",
+        review: "[Verified review placeholder: Sharp cuts every single visit. Unrushed, professional and great atmosphere.]",
         rating: 5,
         source: "Google",
         date: "Recent",
@@ -260,7 +263,7 @@ export const businessConfig = {
         id: "review-3",
         author: "[Client Name]",
         role: "Regular Client",
-        review: "[Verified Google review placeholder: Fernando always takes the time to get the lines perfect. Highly recommended.]",
+        review: "[Verified review placeholder: Always takes the time to get the lines perfect. Highly recommended.]",
         rating: 5,
         source: "Google",
         date: "Recent",
@@ -271,39 +274,21 @@ export const businessConfig = {
   // Developer credit
   credit: {
     text: "Website by Dhalef",
-    url: "https://dhalef.com", // or portfolio link
+    url: "https://dhalef.com",
   }
 };
 
 /**
- * Generate a WhatsApp booking link with a pre-filled message.
- * Supports service-specific inquiries and international formatting.
+ * Generate a WhatsApp booking link or demo anchor.
+ * In demo mode, this returns an anchor so no real phone number is ever called.
  */
-export function getWhatsAppBookingUrl(serviceName?: string): string {
-  const number = businessConfig.contact.whatsappNumber;
-  let text = businessConfig.contact.defaultBookingMessage;
-
-  if (serviceName) {
-    text = `Hi Faded Barbershop, I’d like to book an appointment for ${serviceName}. What times are available?`;
-  }
-
-  const encodedText = encodeURIComponent(text);
-  
-  if (number && number.trim().length > 0) {
-    return `https://wa.me/${number.replace(/\D/g, '')}?text=${encodedText}`;
-  }
-  
-  // Fallback direct WhatsApp web/app link if phone number is pending confirmation
-  return `https://api.whatsapp.com/send?text=${encodedText}`;
+export function getWhatsAppBookingUrl(_serviceName?: string): string {
+  return "#demo-booking";
 }
 
 /**
- * Generate phone call URI
+ * Generate phone call URI or demo anchor.
  */
 export function getPhoneCallUrl(): string {
-  const raw = businessConfig.contact.phoneRaw;
-  if (raw && raw.trim().length > 0) {
-    return `tel:${raw.replace(/[^\d+]/g, '')}`;
-  }
-  return "#contact";
+  return "#demo-phone";
 }

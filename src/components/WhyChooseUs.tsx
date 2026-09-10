@@ -23,7 +23,7 @@ export const WhyChooseUs: React.FC = () => {
             <span className="w-5 h-[1px] bg-brand-gold" />
           </div>
           <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-tight text-brand-white leading-none">
-            Why Choose Faded Barbershop
+            Why Choose {businessConfig.businessName}
           </h2>
         </div>
 

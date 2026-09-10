@@ -1,5 +1,5 @@
 import React from "react";
-import { getWhatsAppBookingUrl } from "../config/businessConfig";
+import { businessConfig, getWhatsAppBookingUrl } from "../config/businessConfig";
 import { MessageSquare, Scissors, Award, Clock } from "lucide-react";
 
 export const About: React.FC = () => {
@@ -21,7 +21,7 @@ export const About: React.FC = () => {
               <div className="relative rounded-sm overflow-hidden bg-brand-surface border border-brand-border shadow-2xl">
                 <img
                   src="/images/fernando-portrait.jpg"
-                  alt="Fernando Chaves - Barber at Faded Barbershop"
+                  alt={`${businessConfig.ownerName} - Master Barber at ${businessConfig.businessName}`}
                   className="w-full h-auto aspect-[3/4] object-cover object-top filter brightness-[0.9] contrast-105"
                 />
                 
@@ -36,7 +36,7 @@ export const About: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-display text-lg uppercase tracking-wider text-brand-white font-bold leading-tight">
-                        Fernando Chaves
+                        {businessConfig.ownerName}
                       </h4>
                       <p className="text-xs text-brand-gold tracking-widest uppercase font-display">
                         Master Barber &amp; Founder
@@ -63,10 +63,10 @@ export const About: React.FC = () => {
 
             <div className="space-y-4 text-brand-grey text-base sm:text-lg leading-relaxed font-normal mb-8">
               <p>
-                At <span className="text-brand-white font-medium">Faded Barbershop</span>, every cut is approached with care, precision and respect for the client’s individual style.
+                At <span className="text-brand-white font-medium">{businessConfig.businessName}</span>, every cut is approached with care, precision and respect for the client’s individual style.
               </p>
               <p>
-                Fernando combines technical attention to detail with a friendly, professional service, making sure every client leaves looking sharp and feeling confident.
+                Our master barbers combine technical attention to detail with a friendly, professional service, making sure every client leaves looking sharp and feeling confident.
               </p>
               <p className="text-sm text-brand-grey/90 pt-1">
                 Whether you need a razor-sharp skin fade, clean beard sculpt, or a complete style change, each appointment is dedicated solely to you—never rushed, never compromised.
@@ -104,21 +104,19 @@ export const About: React.FC = () => {
             <div className="pt-6 border-t border-brand-border flex flex-col sm:flex-row sm:items-center justify-between gap-6">
               <div>
                 <span className="font-display text-lg uppercase tracking-wider text-brand-white font-semibold block">
-                  Fernando Chaves · Barber
+                  {businessConfig.ownerName} · Master Barber
                 </span>
                 <span className="text-xs text-brand-grey">
-                  Faded Barbershop · Ireland
+                  {businessConfig.businessName}
                 </span>
               </div>
 
               <a
-                href={getWhatsAppBookingUrl("Cut with Fernando")}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={getWhatsAppBookingUrl("Barber Appointment")}
                 className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-sm bg-brand-orange hover:bg-brand-orange-hover text-white font-medium text-sm tracking-wider uppercase transition-all duration-200 shadow-md hover:shadow-orange-glow self-start sm:self-auto"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>Book with Fernando</span>
+                <span>Book Appointment</span>
               </a>
             </div>
 

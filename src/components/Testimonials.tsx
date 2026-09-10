@@ -23,7 +23,7 @@ export const Testimonials: React.FC = () => {
             What Clients Say
           </h2>
           <p className="text-base text-brand-grey font-normal mt-3">
-            Genuine feedback from clients in Fernando's chair.
+            Genuine feedback from satisfied clients.
           </p>
         </div>
 

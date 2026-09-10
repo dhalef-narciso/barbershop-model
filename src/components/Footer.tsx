@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
     { label: "Home", href: "#" },
     { label: "Services", href: "#services" },
     { label: "Portfolio", href: "#portfolio" },
-    { label: "About Fernando", href: "#about" },
+    { label: "About Us", href: "#about" },
     { label: "Location & Hours", href: "#contact" },
   ];
 
@@ -27,10 +27,10 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-2xl font-bold tracking-wider text-brand-white uppercase leading-none">
-                  FADED
+                  {businessConfig.brandWord1}
                 </span>
                 <span className="font-display text-[10px] tracking-[0.28em] text-brand-gold uppercase font-medium mt-0.5">
-                  BARBERSHOP
+                  {businessConfig.brandWord2}
                 </span>
               </div>
             </div>
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
             </p>
 
             <p className="text-xs text-brand-grey leading-relaxed max-w-sm">
-              Tailored grooming, clean skin fades, and personalized barbering by Fernando Chaves in Ireland.
+              Tailored grooming, clean skin fades, and personalized barbering in a modern, welcoming space.
             </p>
 
             <div className="flex items-center gap-2 text-xs text-brand-grey/80 pt-2">
@@ -76,8 +76,6 @@ export const Footer: React.FC = () => {
             <div className="space-y-3">
               <a
                 href={getWhatsAppBookingUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-sm bg-brand-surface border border-brand-border hover:border-brand-gold/40 text-brand-white transition-colors group"
               >
                 <MessageSquare className="w-4 h-4 text-brand-orange" />
@@ -115,7 +113,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Legal & Developer Credits */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-grey/70">
           <p>
-            &copy; {currentYear} Faded Barbershop. All rights reserved.
+            &copy; {currentYear} {businessConfig.businessName}. All rights reserved.
           </p>
 
           {/* Discreet clickable credit as requested */}

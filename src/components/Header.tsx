@@ -36,17 +36,17 @@ export const Header: React.FC = () => {
           <a
             href="#"
             className="group flex items-center gap-2.5 focus:outline-none"
-            aria-label="Faded Barbershop Home"
+            aria-label={`${businessConfig.businessName} Home`}
           >
             <div className="w-8 h-8 rounded-sm bg-brand-surface border border-brand-gold/40 flex items-center justify-center text-brand-gold group-hover:border-brand-gold transition-colors">
               <Scissors className="w-4 h-4 transform -rotate-45" />
             </div>
             <div className="flex flex-col">
               <span className="font-display text-xl sm:text-2xl font-bold tracking-wider text-brand-white uppercase leading-none">
-                FADED
+                {businessConfig.brandWord1}
               </span>
               <span className="font-display text-[10px] tracking-[0.28em] text-brand-gold uppercase font-medium mt-0.5">
-                BARBERSHOP
+                {businessConfig.brandWord2}
               </span>
             </div>
           </a>
@@ -68,8 +68,6 @@ export const Header: React.FC = () => {
           <div className="hidden md:flex items-center gap-4">
             <a
               href={getWhatsAppBookingUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-brand-orange hover:bg-brand-orange-hover text-white font-medium text-sm tracking-wider uppercase transition-all duration-200 shadow-md hover:shadow-orange-glow focus:outline-none focus:ring-2 focus:ring-brand-orange/50"
             >
               <MessageSquare className="w-4 h-4" />
@@ -81,8 +79,6 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-2 md:hidden">
             <a
               href={getWhatsAppBookingUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-brand-orange text-white text-xs font-medium uppercase tracking-wider"
               aria-label="Quick Book"
             >
@@ -119,8 +115,6 @@ export const Header: React.FC = () => {
           <div className="pt-3 border-t border-brand-border/60">
             <a
               href={getWhatsAppBookingUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-sm bg-brand-orange text-white font-medium text-sm tracking-wider uppercase shadow-md"
             >
@@ -128,7 +122,7 @@ export const Header: React.FC = () => {
               <span>Book Your Appointment</span>
             </a>
             <p className="text-center text-xs text-brand-grey mt-2">
-              WhatsApp booking · {businessConfig.locationCountry}
+              Demonstration Mode · Apex Barbershop
             </p>
           </div>
         </div>

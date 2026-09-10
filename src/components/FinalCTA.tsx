@@ -47,8 +47,6 @@ export const FinalCTA: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
           <a
             href={getWhatsAppBookingUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-sm bg-brand-orange hover:bg-brand-orange-hover text-white font-medium text-sm sm:text-base tracking-wider uppercase transition-all duration-200 shadow-lg hover:shadow-orange-glow focus:outline-none focus:ring-2 focus:ring-brand-orange/60"
           >
             <MessageSquare className="w-5 h-5" />

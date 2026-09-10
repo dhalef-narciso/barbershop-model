@@ -25,8 +25,6 @@ export const FloatingActions: React.FC = () => {
       >
         <a
           href={getWhatsAppBookingUrl()}
-          target="_blank"
-          rel="noopener noreferrer"
           className="group flex items-center gap-3 p-3 pl-4 rounded-full bg-brand-orange hover:bg-brand-orange-hover text-white shadow-xl hover:shadow-orange-glow transition-all duration-200 border border-white/10"
           aria-label="Book on WhatsApp"
         >
@@ -59,8 +57,6 @@ export const FloatingActions: React.FC = () => {
           {/* Primary WhatsApp Booking Action */}
           <a
             href={getWhatsAppBookingUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-2 h-12 rounded-sm bg-brand-orange active:bg-brand-orange-hover text-white font-medium text-sm font-display tracking-wider uppercase shadow-md active:scale-[0.98] transition-transform"
           >
             <MessageSquare className="w-4 h-4" />
